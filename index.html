@@ -67,10 +67,145 @@
             data-bs-toggle="modal"
             data-bs-target="#modal"
           >
-            Pouzivani Cookies
+            Cookies
           </button>
         </div>
       </section>
     </header>
+
+    <main></main>
+
+    <footer>
+      <div class="foot">
+        <div>&copy;veetek 2024</div>
+      </div>
+    </footer>
+    <!-- modal -->
+    <div
+      class="modal fade"
+      id="modal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 text-primary" id="staticBackdropLabel">
+              Book your journey
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="book-email" class="form-label">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="book-email"
+                placeholder="name@example.com"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="book-name" class="form-label">Your name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="book-name"
+                placeholder="Joanne English"
+              />
+            </div>
+            <div class="row mb-3">
+              <div class="col-6">
+                <label for="book-from" class="form-label">From</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="book-from"
+                  placeholder="name@example.com"
+                />
+              </div>
+              <div class="col-6">
+                <label for="book-to" class="form-label">To</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="book-to"
+                  placeholder="name@example.com"
+                />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="book-number" class="form-label"
+                >Number of travellers</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="book-number"
+                placeholder="1"
+                min="1"
+                max="20"
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Book
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const navbarMenu = document.querySelector('#navbarNav');
+            const bsCollapse = new bootstrap.Collapse(navbarMenu, { toggle: false });
+
+            const collapseNavbar = () => {
+                if (window.innerWidth < 992) {
+                    bsCollapse.hide();
+                }
+            };
+
+            navLinks.forEach(link => link.addEventListener('click', collapseNavbar));
+        });
+        // document.addEventListener("DOMContentLoaded", () => {
+        //     const navLinks = document.querySelectorAll('.nav-link');
+        //     const navbarMenu = document.querySelector('#navbarNav');
+
+        //     const collapseNavbar = () => {
+        //         if (window.innerWidth < 992) {
+        //             if (navbarMenu.classList.contains('show')) {
+        //                 navbarMenu.classList.remove('show');
+        //             }
+        //         }
+        //     };
+
+        //     navLinks.forEach(link => link.addEventListener('click', collapseNavbar));
+        // });
+    </script>
+    
   </body>
 </html>
