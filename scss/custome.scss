@@ -19,6 +19,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Zain";
+  src: url(../Fonts/Zain-Regular.ttf) format(truetype);
+  font-weight: 400;
+  font-style: normal;
+}
+
 $primary: aqua;
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
@@ -29,10 +36,12 @@ $primary: aqua;
 
 // Then add additional custom code here
 body {
-  font-family: "IbmPlexSans", sans-serif;
+  /*  font-family: "IbmPlexSans", sans-serif;
   font-weight: 400;
   background-color: #38373b;
-  color: #ffffff;
+  color: #ffffff; */
+
+  font-family: "Times New Roman", Times, serif;
 }
 
 header {
@@ -104,6 +113,11 @@ main {
 span {
   font-family: "IbmPlexSans", sans-serif;
   font-weight: 400;
-  background-color: #38373b;
+  /* background-color: #38373b;*/
   color: red;
+}
+
+.X {
+  font-family: "IbmPlexSans", sans-serif;
+  font-weight: 400;
 }
